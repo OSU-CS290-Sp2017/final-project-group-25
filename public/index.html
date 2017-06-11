@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title></title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+    <!-- change  href="style.css" to  href="/style.css" when rdy to serve with server -->
+    <link rel="stylesheet" href="style.css" media="screen">
+
+  </head>
+
+  <body>
+
+    <header>
+
+      <a href="#"><h1 class="site-title"> Corvallis Yard Sales </h1> </a>
+      <button type="button" id="New_Listing_Button"> New Post</button>
+
+      <input type="text" id="Menu_Bar_Search_Input" placeholder="Find Stuff">
+      <button type="button" id="navbar-search-button"><i class="fa fa-binoculars"></i></button>
+
+
+      <nav class="Menu_Bar">
+        <ul class="Menu_directory">
+
+          <li class="Menu_Bar_Item Menu_Link active"><a href="#">Home <j class="fa fa-home" aria-hidden="true"></j></a></li>
+
+          <li class="Menu_Bar_Item Menu_Link"><a href="#">Local Listings <k class="fa fa-flag" aria-hidden="true"></k></a></li>
+
+          <li class="Menu_Bar_Item Menu_Link"><a href="#">Sell Item <l class="fa fa-tags" aria-hidden="true"></l></a></li>
+
+          <li class="Menu_Bar_Item Menu_Link"><a href="#">Buy Item <l class="fa fa-tags" aria-hidden="true"></l></a></li>
+
+          <li class="Menu_Bar_Item navbar-search">
+
+
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="Listing_Field">
+
+      <article class="Listing_Box">
+        <div class="Type_Icon">
+          <i class="fa fa-flag"></i>
+        </div>
+        <!-- this is where the text is displayed to the user -->
+        <div class="Description_Field">
+          <p class="Text_On_Screen">
+            moving sale everyting must GO!
+          </p>
+          <p class="Sale_Date">
+            <a href="#">Fri, Sat</a>
+          </p>
+          <p class="Sale_time">
+            <a href="#">0900 - 1300</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="Listing_Box">
+        <div class="Type_Icon">
+          <i class="fa fa-tag"></i>
+        </div>
+        <!-- this is where the text is displayed to the user -->
+        <div class="Description_Field">
+          <p class="Text_On_Screen">
+            Looking to Sell Bridge slitely used
+            <img class="Thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg" />
+            </p>
+          <p class="Sale_Ammount">
+            <a href="#">$ 5,000 OBO</a>
+          </p>
+        </div>
+      </article>
+
+
+
+    </main>
+
+
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="create-twit-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Create a Twit</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="twit-input-element">
+            <label for="twit-text-input">Twit text</label>
+            <textarea id="twit-text-input"></textarea>
+          </div>
+          <div class="twit-input-element">
+            <label for="twit-attribution-input">Author</label>
+            <input type="text" id="twit-attribution-input">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button">Create Twit</button>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+
+  <script src="/index.js" charset="utf-8"></script>
+
+</html>
