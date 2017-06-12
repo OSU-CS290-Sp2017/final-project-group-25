@@ -1,41 +1,53 @@
-/*
- * Add the contents of your index.js file from Assignment 3 here to see the
- * interactions you implemented.
- */
 
- var createTwitButton = document.getElementById('New_Listing_Button');
-createTwitButton.addEventListener('click', function() {
-  unhideModal();
-});
+
+ var Create_Button = document.getElementById('New_Listing_Button');
+Create_Button.addEventListener('click', function() {unhideModal();});
+
 function unhideModal(){
-    document.getElementById("New_Post_Background").style.display ="block";
+    document.getElementById("Popup_Background").style.display ="block";
     document.getElementById("Dialog_Window").style.display = "block";
 }
 
-var modalCloseButton = document.getElementsByClassName('Close_Button')[0];
-modalCloseButton.addEventListener('click', function() {
-  closeModal();
-});
+var Close_Button = document.getElementsByClassName('Close_Button')[0];
+Close_Button.addEventListener('click', function() {closeModal();});
 
-var modalCloseButton = document.getElementsByClassName('Window_Cancel_Button')[0];
-modalCloseButton.addEventListener('click', function() {
-  closeModal();
-});
+var Close_Button = document.getElementsByClassName('Window_Cancel_Button')[0];
+Close_Button.addEventListener('click', function() {closeModal();});
+
+var Accept_Button = document.getElementsByClassName('Window_Accept_Button')[0];
+Accept_Button.addEventListener('click', function() {acceptButton();});
 
 function closeModal(){
-    document.getElementById("New_Post_Background").style.display ="none";
+    document.getElementById("Popup_Background").style.display ="none";
     document.getElementById("Dialog_Window").style.display = "none";
     document.getElementById("text_input").value = "";
     document.getElementById("Date_Input").value = "";
 }
 
-var modalacceptButton = document.getElementsByClassName('Window_Accept_Button')[0];
-modalacceptButton.addEventListener('click', function() {
-  acceptButton();
-});
+
 
 function acceptButton(){
-  var main  = document.createElement("main");
+  if (document.getElementById("text_input").value === "" && document.getElementById("Date_Input").value === "")
+  {
+    alert("You did not enter any text for either field")
+    return 0;
+  }
+
+  else if (document.getElementById("text_input").value === "")
+  {
+    alert("You did not enter any text")
+    return 0;
+  }
+  else if(document.getElementById("Date_Input").value === "")
+  {
+    alert("You did not enter any text for a Attribution")
+    return 0;
+  }
+
+  else
+  {
+
+ var main  = document.createElement("main");
 
  var article = document.createElement("article");
  console.log(article);
@@ -46,10 +58,15 @@ function acceptButton(){
  var p2 = document.createElement("P");
  var a = document.createElement("A");
 
+ var img = document.createElement("img");
+
  article.appendChild(div1);
  div1.appendChild(i);
  article.appendChild(div2);
  div2.appendChild(p);
+
+ img.appendChild(p);
+
  div2.appendChild(p2);
  p2.appendChild(a);
 
@@ -58,44 +75,42 @@ function acceptButton(){
  i.className = "fa fa-flag";
  div2.className = "Description_Field";
  p.className = "Text_On_Screen";
+
+ img.className = "Thumbnail";
+
  p2.className = "Sale_Date_Time";
  a.className = "#";
 
- var newtext = document.createTextNode(document.getElementById("text_input").value);
- var newatt = document.createTextNode(document.getElementById("Date_Input").value);
- newtext.classname = "Text_On_Screen";
- newatt.classname = "Sale_Date_Time";
- p.appendChild(newtext);
- p2.appendChild(newatt);
+ var new_text = document.createTextNode(document.getElementById("text_input").value);
+ var New_date = document.createTextNode(document.getElementById("Date_Input").value);
+
+var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
+
+ new_text.classname = "Text_On_Screen";
+ New_date.classname = "Sale_Date_Time";
+
+ New_URL.classname = "Img_URL";
+
+ p.appendChild(new_text);
+ p2.appendChild(New_date);
+
+ p2.appendChild(New_URL);
+ 
  div1.appendChild(p);
  div1.appendChild(p2);
 
- var twitcontainer = document.getElementsByClassName("Listing_Field");
- twitcontainer[0].appendChild(article);
- var alert = false;
+ var container = document.getElementsByClassName("Listing_Field");
+ container[0].appendChild(article);
 
-  if (document.getElementById("Date_Input").value === "" && document.getElementById("text_input").value === "")
-  {
-    alert("You did not enter any text for either field");
-  }
+ document.getElementById("Popup_Background").style.display ="none";
+ document.getElementById("Dialog_Window").style.display = "none";
+ document.getElementById("text_input").value = "";
+ document.getElementById("Date_Input").value = "";
 
-  else if (document.getElementById("text_input").value === "")
-  {
-    alert("You did not enter any text for a Twit");
-  }
-  else if(document.getElementById("Date_Input").value === "")
-  {
-    alert("You did not enter any text for a Attribution");
-  }
+ document.getElementById("Img_URL").value = "";
+ }
 
-  else
-  {
-  document.getElementById("modal-backdrop").style.display ="none";
-  document.getElementById("Dialog_Window").style.display = "none";
-  document.getElementById("text_input").value = "";
-  document.getElementById("Date_Input").value = "";
-  }
-}
+};
 
 
 /***********************SEARCH FUNCTION************************************/

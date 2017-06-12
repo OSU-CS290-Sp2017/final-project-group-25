@@ -3,8 +3,8 @@ body {
   margin: 0;
   height: 75em;
   background: white;
-  background: -moz-linear-gradient(#c8ecfc, white);
-  background: -webkit-linear-gradient(#c8ecfc, white);
+  background: -moz-linear-gradient(#71c1ff, white);
+  background: -webkit-linear-gradient(#71c1ff, white);
 }
 
 a {
@@ -12,6 +12,14 @@ a {
 }
 i{
   float: right;
+}
+
+header{
+  background-image: url("img.JPG");
+  background-position: right center;
+
+  background-repeat: no-repeat;
+
 }
 
 
@@ -25,6 +33,7 @@ i{
   border: none;
   border-radius: 5px;
   font-size: 22px;
+
   font-weight: 100;
   background-color: #1fc82f;
   color: #fff;
@@ -67,7 +76,6 @@ a:focus {
   display: inline-block;
 }
 
-}
 
 
 .navbar-search {
@@ -108,14 +116,17 @@ a:focus {
   outline: none;
 }
 
+
+
 .Listing_Field {
-  margin: 50px 10%;
+  margin-left: 5px;
+  margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .Listing_Box {
-  flex: 0 1 28%;
+  flex: 0 1 15em;
   display: flex;
   margin: 2px;
   padding: 20px;
@@ -123,6 +134,11 @@ a:focus {
   border-radius: 5px;
   background-color: hsla(0, 0%, 100%, 0);
 }
+
+.Text_On_Screen{
+  text-overflow: clip;
+}
+
 .Sale_Box {
   flex: 0 1 28%;
   display: flex;
@@ -148,7 +164,9 @@ a:focus {
 
 .Description_Field .Sale_Date_Time {
   margin-top: 8px;
+
   text-align: right;
+
   font-weight: bold;
 }
 
@@ -169,7 +187,7 @@ a:focus {
   width: 120px;
   border: none;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 20px;
   background-color: #e7e7e7;
   color: #FF6600;
   cursor: pointer;
@@ -191,7 +209,7 @@ a:focus {
   outline: none;
 }
 
-#New_Post_Background {
+#Popup_Background {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -280,6 +298,12 @@ a:focus {
   flex: 1 75px;
   margin-right: 10px;
 }
+.input_element img {
+  font-weight: 600;
+  flex: 1 75px;
+  margin-right: 10px;
+}
+
 
 .input_element input,
 .input_element textarea {
@@ -337,4 +361,16 @@ a:focus {
   margin: 10px 0;
   font-size: 36px;
   font-weight: 400;
+}
+
+#footer{
+  position: fixed;
+  margin-top: 0px;
+  bottom:0px;
+  width: 100%;
+  background-image: url("Grass.png");
+  background-repeat: no-repeat;
+  height: 200px;
+
+
 }

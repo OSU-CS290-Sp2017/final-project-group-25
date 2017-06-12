@@ -1,136 +1,141 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <title></title>
+  <meta charset="utf-8">
+  <title></title>
 
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
-    <!-- change  href="style.css" to  href="/style.css" when rdy to serve with server -->
-    <link rel="stylesheet" href="style.css" media="screen">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
+  <!-- change  href="style.css" to  href="/style.css" when rdy to serve with server -->
+  <link rel="stylesheet" href="style.css" media="screen">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <header>
+  <header>
+    <a href="#"><h1 class="Site_Title"> Corvallis Yard Sales </h1> </a>
+  </header>
 
-      <a href="#"><h1 class="Site_Title"> Corvallis Yard Sales </h1> </a>
+
+
+
+
+
+  <main class="Listing_Field">
+
+    <nav class="Menu_Bar">
       <button type="button" id="New_Listing_Button"> New Post </button>
+      <ul class="Menu_directory">
+        <input type="text" id="Menu_Bar_Search_Input" placeholder="Find Stuff">
+        <button type="button" id="Search_Button"><i class="fa fa-binoculars"></i></button>
 
+        <li class="Menu_Bar_Item Menu_Link active"><a href="#"> CYS Home <j class="fa fa-home" aria-hidden="true"></j></a></li>
 
+        <li class="Menu_Bar_Item Menu_Link"><a href="#">Local Listings <k class="fa fa-flag" aria-hidden="true"></k></a></li>
 
-      <nav class="Menu_Bar">
-        <ul class="Menu_directory">
-          <input type="text" id="Menu_Bar_Search_Input" placeholder="Find Stuff">
-          <button type="button" id="Search_Button"><i class="fa fa-binoculars"></i></button>
+        <li class="Menu_Bar_Item Menu_Link"><a href="#">Willing to Sell <l class="fa fa-tags" aria-hidden="true"></l></a></li>
 
-          <li class="Menu_Bar_Item Menu_Link active"><a href="#">Home <j class="fa fa-home" aria-hidden="true"></j></a></li>
+        <li class="Menu_Bar_Item Menu_Link"><a href="#">Willing to Buy <l class="fa fa-tags" aria-hidden="true"></l></a></li>
 
-          <li class="Menu_Bar_Item Menu_Link"><a href="#">Local Listings <k class="fa fa-flag" aria-hidden="true"></k></a></li>
+        <li class="Menu_Bar_Item navbar-search">
 
-          <li class="Menu_Bar_Item Menu_Link"><a href="#">Sell Item <l class="fa fa-tags" aria-hidden="true"></l></a></li>
+        </li>
+      </ul>
+    </nav>
 
-          <li class="Menu_Bar_Item Menu_Link"><a href="#">Buy Item <l class="fa fa-tags" aria-hidden="true"></l></a></li>
+    <article class="Listing_Box">
+      <div class="Type_Icon">
+        <i class="fa fa-flag"></i>
+      </div>
+      <!-- this is where the text is displayed to the user -->
+      <div class="Description_Field">
+        <p class="Text_On_Screen">
+          moving sale everyting must GO!
+        </p>
 
-          <li class="Menu_Bar_Item navbar-search">
-
-
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="Listing_Field">
-
-      <article class="Listing_Box">
-        <div class="Type_Icon">
-          <i class="fa fa-flag"></i>
-        </div>
-        <!-- this is where the text is displayed to the user -->
-        <div class="Description_Field">
-          <p class="Text_On_Screen">
-            moving sale everyting must GO!
-          </p>
-
-          <p class="Sale_Date_Time">
-            <a href="#">Fri, Sat 0900 - 1300</a>
-          </p>
-
-        </div>
-      </article>
-
-      <article class="Listing_Box">
-        <div class="Type_Icon">
-          <i class="fa fa-tag"></i>
-        </div>
-        <!-- this is where the text is displayed to the user -->
-        <div class="Description_Field">
-          <p class="Text_On_Screen">
-            Looking to Sell Bridge slitely used
-            <img class="Thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg" />
-            </p>
-          <p class="Sale_Ammount">
-            <a href="#">$ 5,000 OBO</a>
-          </p>
-        </div>
-      </article>
-
-      <article class="Listing_Box">
-        <div class="Type_Icon">
-          <i class="fa fa-tag"></i>
-        </div>
-        <!-- this is where the text is displayed to the user -->
-        <div class="Description_Field">
-          <p class="Text_On_Screen">
-            Willing to buy small moon. Must be in good condition.
-            <img class="Thumbnail" src="https://vignette3.wikia.nocookie.net/starwars/images/7/72/DeathStar1-SWE.png/revision/latest?cb=20150121020639" />
-            </p>
-          <p class="Sale_Ammount">
-            <a href="#"> < $1.25 Million </a>
-          </p>
-        </div>
-      </article>
-
-
-
-    </main>
-
-
-
-    <div id="New_Post_Background" class="hidden"></div>
-    <div id="Dialog_Window" class="hidden">
-      <div class="Dialog">
-
-        <div class="Window_Header">
-          <a href="#"><h3 class="Window_Title"> Corvallis Yard Sales </h3> </a>
-          <button type="button" class="Close_Button">&times;</button>
-        </div>
-
-        <div class="Window_body">
-          <div class="input_element">
-            <label for="text_input">Description</label>
-            <textarea id="text_input"></textarea>
-          </div>
-          <div class="input_element">
-            <label for="Date_Input">When</label>
-            <input type="text" id="Date_Input">
-          </div>
-        </div>
-
-        <div class="Window_Footer">
-          <button type="button" class="Window_Cancel_Button">Cancel</button>
-          <button type="button" class="Window_Accept_Button">Post</button>
-        </div>
+        <p class="Sale_Date_Time">
+          <a href="#">Fri, Sat 0900 - 1300</a>
+        </p>
 
       </div>
+    </article>
+
+    <article class="Listing_Box">
+      <div class="Type_Icon">
+        <i class="fa fa-tag"></i>
+      </div>
+      <!-- this is where the text is displayed to the user -->
+      <div class="Description_Field">
+        <p class="Text_On_Screen">
+          Looking to Sell Bridge slightly used
+          <img class="Thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg" />
+        </p>
+        <p class="Sale_Ammount">
+          <a href="#">$ 5,000 OBO</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="Listing_Box">
+      <div class="Type_Icon">
+        <i class="fa fa-tag"></i>
+      </div>
+      <!-- this is where the text is displayed to the user -->
+      <div class="Description_Field">
+        <p class="Text_On_Screen">
+          Willing to buy small moon. Must be in good condition.
+          <img class="Thumbnail" src="https://vignette3.wikia.nocookie.net/starwars/images/7/72/DeathStar1-SWE.png/revision/latest?cb=20150121020639" />
+        </p>
+        <p class="Sale_Ammount">
+          <a href="#"> < $1.25 Million </a>
+        </p>
+      </div>
+    </article>
+
+  </main>
+
+  <div id="Popup_Background" class="hidden"></div>
+  <div id="Dialog_Window" class="hidden">
+    <div class="Dialog">
+
+      <div class="Window_Header">
+        <a href="#"><h3 class="Window_Title"> Corvallis Yard Sales </h3> </a>
+        <button type="button" class="Close_Button">&times;</button>
+      </div>
+
+      <div class="Window_body">
+        <div class="input_element">
+          <label for="text_input">Description</label>
+          <textarea id="text_input"></textarea>
+        </div>
+        <div class="input_element">
+          <label for="Date_Input">When Or $ </label>
+          <input type="text" id="Date_Input">
+        </div>
+
+        <div class="input_element">
+          <img for="Img_URL">URL</img>
+          <input type="url" id="Img_URL" placeholder="not working">
+        </div>
+      </div>
+
+      <div class="Window_Footer">
+        <button type="button" class="Window_Cancel_Button">Cancel</button>
+        <button type="button" class="Window_Accept_Button">Post</button>
+      </div>
     </div>
+  </div>
 
-  </body>
+</div>
+</body>
 
-  <script src="index.js" charset="utf-8"></script>
 
+<script src="index.js" charset="utf-8"></script>
+<footer id="footer" role="contentinfo">
+
+</footer>
 </html>
