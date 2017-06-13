@@ -17,6 +17,27 @@ Close_Button.addEventListener('click', function() {closeModal();});
 var Accept_Button = document.getElementsByClassName('Window_Accept_Button')[0];
 Accept_Button.addEventListener('click', function() {acceptButton();});
 
+var CYS_Home_Button = document.getElementById("Home");
+CYS_Home_Button.addEventListener('click', function(){ showAllListings(); });
+
+var Local_Listings_Button = document.getElementById("Local_Listings");
+Local_Listings_Button.addEventListener('click', function(){
+    showAllListings();
+    showLocalListing();
+});
+
+var Willing_to_Sell_Button = document.getElementById("Willing_to_Sell");
+Willing_to_Sell_Button.addEventListener('click', function(){
+    showAllListings();
+    showSelling();
+});
+
+var Willing_to_Buy_Button = document.getElementById("Willing_to_Buy");
+Willing_to_Buy_Button.addEventListener('click', function(){
+    showAllListings();
+    showBuying();
+});
+
 function closeModal(){
     document.getElementById("Popup_Background").style.display ="none";
     document.getElementById("Dialog_Window").style.display = "none";
@@ -113,6 +134,61 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
  }
 
 };
+
+function showSelling(){
+    var buyBoxes = document.getElementsByClassName("Buy_Box");
+    for (var i = 0; i < buyBoxes.length; i++){
+        buyBoxes[i].style.display = "none";
+    }
+
+    var listBoxes = document.getElementsByClassName("Local_List_Box");
+    for (var i = 0; i < listBoxes.length; i++){
+        listBoxes[i].style.display = "none";
+    }
+    console.log("Showing only selling");
+}
+
+function showBuying(){
+    var sellBoxes = document.getElementsByClassName("Sell_Box");
+    for (var i = 0; i < sellBoxes.length; i++){
+        sellBoxes[i].style.display = "none";
+    }
+
+    var listBoxes = document.getElementsByClassName("Local_List_Box");
+    for (var i = 0; i < listBoxes.length; i++){
+        listBoxes[i].style.display = "none";
+    }
+}
+
+function showLocalListing(){
+    var sellBoxes = document.getElementsByClassName("Sell_Box");
+    for (var i = 0; i < sellBoxes.length; i++){
+        sellBoxes[i].style.display = "none";
+    }
+
+    var buyBoxes = document.getElementsByClassName("Buy_Box");
+    for (var i = 0; i < buyBoxes.length; i++){
+        buyBoxes[i].style.display = "none";
+    }
+}
+
+function showAllListings(){
+     var sellBoxes = document.getElementsByClassName("Sell_Box");
+    for (var i = 0; i < sellBoxes.length; i++){
+        sellBoxes[i].style.display = "initial";
+    }
+
+    var buyBoxes = document.getElementsByClassName("Buy_Box");
+    for (var i = 0; i < buyBoxes.length; i++){
+        buyBoxes[i].style.display = "initial";
+    }
+
+    var listBoxes = document.getElementsByClassName("Local_List_Box");
+    for (var i = 0; i < listBoxes.length; i++){
+        listBoxes[i].style.display = "initial";
+    }
+
+}
 
 
 /***********************SEARCH FUNCTION************************************/
