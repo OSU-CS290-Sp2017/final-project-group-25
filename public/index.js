@@ -78,6 +78,8 @@ function acceptButton(){
 
  img.className = "Thumbnail";
 
+ img.src = document.getElementById("Img_URL").value;
+
  p2.className = "Sale_Date_Time";
  a.className = "#";
 
@@ -94,7 +96,7 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
  p.appendChild(new_text);
  p2.appendChild(New_date);
 
- p2.appendChild(New_URL);
+ p2.appendChild(img);
  
  div1.appendChild(p);
  div1.appendChild(p2);
