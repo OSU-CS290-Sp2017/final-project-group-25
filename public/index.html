@@ -21,25 +21,28 @@
   </header>
 
 
-
-
-
-
   <main class="Listing_Field">
 
     <nav class="Menu_Bar">
-      <button type="button" id="New_Listing_Button"> New Post </button>
+
+
+<div class="List">
+      <button type="button" id="New_Listing_Button"> Listing </button>
+      <button type="button" id="New_sell_Button"> Sell </button>
+      <button type="button" id="New_buy_Button"> Buy </button>
+</div>
+
       <ul class="Menu_directory">
         <input type="text" id="Menu_Bar_Search_Input" placeholder="Find Stuff">
         <button type="button" id="Search_Button"><i class="fa fa-binoculars"></i></button>
 
-        <li class="Menu_Bar_Item Menu_Link active" id = "Home"><a href="#"> CYS Home <j class="fa fa-home" aria-hidden="true"></j></a></li>
+        <li class="Menu_Bar_Item Menu_Link active"><a href="#"> CYS Home <j class="fa fa-home" aria-hidden="true"></j></a></li>
 
-        <li class="Menu_Bar_Item Menu_Link" id = "Local_Listings"><a href="#">Local Listings <k class="fa fa-flag" aria-hidden="true"></k></a></li>
+        <li class="Menu_Bar_Item Menu_Link"><a href="#">Local Listings <k class="fa fa-flag" aria-hidden="true"></k></a></li>
 
-        <li class="Menu_Bar_Item Menu_Link" id = "Willing_to_Sell"><a href="#">Willing to Sell <l class="fa fa-tags" aria-hidden="true"></l></a></li>
+        <li class="Menu_Bar_Item Menu_Link"><a href="#">Willing to Sell <l class="fa fa-tags" aria-hidden="true"></l></a></li>
 
-        <li class="Menu_Bar_Item Menu_Link" id = "Willing_to_Buy"><a href="#">Willing to Buy <l class="fa fa-tags" aria-hidden="true"></l></a></li>
+        <li class="Menu_Bar_Item Menu_Link"><a href="#">Willing to Buy <l class="fa fa-tags" aria-hidden="true"></l></a></li>
 
         <li class="Menu_Bar_Item navbar-search">
 
@@ -47,7 +50,10 @@
       </ul>
     </nav>
 
-    <article class="Listing_Box Local_List_Box">
+
+<div class=Post>
+
+    <article class="Listing_Box" "List_Box">
       <div class="Type_Icon">
         <i class="fa fa-flag"></i>
       </div>
@@ -64,7 +70,7 @@
       </div>
     </article>
 
-    <article class="Listing_Box Sell_Box">
+    <article class= "Listing_Box" "sell_Box">
       <div class="Type_Icon">
         <i class="fa fa-tag"></i>
       </div>
@@ -80,7 +86,7 @@
       </div>
     </article>
 
-    <article class="Listing_Box Buy_Box">
+    <article class="Listing_Box" "buy_Box">
       <div class="Type_Icon">
         <i class="fa fa-tag"></i>
       </div>
@@ -95,6 +101,11 @@
         </p>
       </div>
     </article>
+
+
+
+
+</div>
 
   </main>
 
@@ -128,6 +139,7 @@
         <button type="button" class="Window_Accept_Button">Post</button>
       </div>
     </div>
+
   </div>
 
 </div>

@@ -47,6 +47,12 @@ header{
   line-height: 22px;
 }
 
+.List{
+  display: flex;
+  flex: 0 1 15em;
+
+}
+
 
 .Menu_directory {
   flex-direction: column;
@@ -116,7 +122,18 @@ a:focus {
   outline: none;
 }
 
+.Post{
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 80%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  align-items: center;
+ align-content: stretch;
 
+}
 
 .Listing_Field {
   margin-left: 5px;
@@ -125,15 +142,23 @@ a:focus {
   flex-wrap: wrap;
 }
 
-.Listing_Box {
+.Listing_Box{
   flex: 0 1 15em;
   display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
   margin: 2px;
   padding: 20px;
   border: 5px solid #1fc82f;
   border-radius: 5px;
   background-color: hsla(0, 0%, 100%, 0);
 }
+
+
+
 
 .Text_On_Screen{
   text-overflow: clip;
@@ -179,33 +204,33 @@ a:focus {
   box-shadow: 10px 10px 5px #888888;
   max-height: 150px;
 }
-#New_Listing_Button {
+#New_Listing_Button,  #New_sell_Button, #New_buy_Button{
   margin: 5px;
   margin-left: 15px;
   margin-bottom: 15px;
-  height: 60px;
-  width: 120px;
+  height: 30px;
+  width: 60px;
   border: none;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 15px;
   background-color: #e7e7e7;
   color: #FF6600;
   cursor: pointer;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-#New_Listing_Button:hover,
-#New_Listing_Button:focus {
+#New_Listing_Button:hover ,  #New_sell_Button:hover, #New_buy_Button:hover,
+#New_Listing_Button:focus, #New_sell_Button:focus, #New_buy_Button:focus {
 
-  height: 60px;
-  width: 125px;
+  height: 35px;
+  width: 65px;
   border-radius: 6px;
   font-size: 20px;
   box-shadow: 10px 10px 5px #888888;
   background-color: #0c4f13;
 }
 
-#New_Listing_Button:focus {
+#New_Listing_Button:focus, #New_sell_Button:focus, #New_buy_Button:focus {
   outline: none;
 }
 
