@@ -1,7 +1,13 @@
 
 
- var Create_Button = document.getElementById('New_Listing_Button');
+var Create_Button = document.getElementById('New_Listing_Button');
 Create_Button.addEventListener('click', function() {unhideModal();});
+
+var Create_Button1 = document.getElementById('New_buy_Button');
+Create_Button1.addEventListener('click', function() {unhideModal();});
+
+var Create_Button2 = document.getElementById('New_sell_Button');
+Create_Button2.addEventListener('click', function() {unhideModal();});
 
 function unhideModal(){
     document.getElementById("Popup_Background").style.display ="block";
@@ -69,7 +75,7 @@ function acceptButton(){
   {
 
  var main  = document.createElement("main");
-
+ var div0 = document.createElement("div");
  var article = document.createElement("article");
  console.log(article);
  var div1 = document.createElement("div");
@@ -81,6 +87,7 @@ function acceptButton(){
 
  var img = document.createElement("img");
 
+ div0.appendChild(article);
  article.appendChild(div1);
  div1.appendChild(i);
  article.appendChild(div2);
@@ -91,6 +98,7 @@ function acceptButton(){
  div2.appendChild(p2);
  p2.appendChild(a);
 
+ div0.className = "Post";
  article.className = "Listing_Box";
  div1.className = "Description_Field";
  i.className = "fa fa-flag";
