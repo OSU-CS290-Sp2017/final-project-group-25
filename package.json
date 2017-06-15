@@ -1,4 +1,24 @@
 {
-  "name": "Loading in progress",
+  "name": "Assignment-Final25",
+  "version": "0.0.1",
+  "description": "Craigslist mimic",
+  "main": "server.js",
 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OSU-CS290-Sp2017/final-project-group-25.git"
+  },
+  "authors": "Frank Thaden, Josh Bell, Sean Cramsey",
+  "lisence": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/OSU-CS290-Sp2017/final-project-group-25/issues"
+  },
+  "homepage": "https://github.com/OSU-CS290-Sp2017/final-project-group-25/blob/master/README.md",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.10",
+    "mongodb": "^2.2.28"
+  }
 }
