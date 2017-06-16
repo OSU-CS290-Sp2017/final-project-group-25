@@ -209,6 +209,7 @@ function showSelling(){
         listBoxes[i].style.display = "none";
     }
     console.log("Showing only selling");
+    console.log(buyBoxes);
 }
 
 function showBuying(){

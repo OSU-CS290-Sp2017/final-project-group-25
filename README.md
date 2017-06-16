@@ -13,4 +13,4 @@ ______________________Still needs working_____________________
 
 New post needs to have a drop down or option to select between listing and sell order.
 
-searches and filters are broken as a result of server.js implementation
+Filters are broken as a result of server.js implementation
