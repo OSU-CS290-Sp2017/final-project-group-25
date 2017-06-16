@@ -1,13 +1,14 @@
 var tagL = "";
+var tagf = "";
 
 var Create_Button = document.getElementById('New_Listing_Button');
-Create_Button.addEventListener('click', function() {unhideModal(); tagL = "Local_List_Box";});
+Create_Button.addEventListener('click', function() {unhideModal(); tagL = "Local_List_Box"; tagf="fa fa-flag"});
 
 var Create_Button1 = document.getElementById('New_buy_Button');
-Create_Button1.addEventListener('click', function() {unhideModal(); tagL = "Buy_Box";});
+Create_Button1.addEventListener('click', function() {unhideModal(); tagL = "Buy_Box"; tagf="fa fa-tag"});
 
 var Create_Button2 = document.getElementById('New_sell_Button');
-Create_Button2.addEventListener('click', function() {unhideModal(); tagL = "Sell_Box"});
+Create_Button2.addEventListener('click', function() {unhideModal(); tagL = "Sell_Box"; tagf="fa fa-tag"});
 
 function unhideModal(){
     document.getElementById("Popup_Background").style.display ="block";
@@ -144,7 +145,7 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
  var image = document.getElementById('Img_URL').value || '';
  var descrip = document.getElementById('text_input').value || '';
  var amount = document.getElementById('Date_Input').value || '';
- storeListing(image, descrip, amount, tagL, function(err) {
+ storeListing(image, descrip, amount, tagL, tagf, function(err) {
    if (err) {
          alert("Unable to save person's post.  Got this error:\n\n" + err);
      } else {
@@ -154,7 +155,8 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
          imgUrl: image,
          text: descrip,
          amount: amount,
-         listTag: tagL
+         listTag: tagL,
+         faTag: tagf
 
        };
 
@@ -167,10 +169,11 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
      }
  });
  listTag = "";
+ tagf = "";
  closeModal();
 };
 
-function storeListing(url, txt, amnt, tag, callback) {
+function storeListing(url, txt, amnt, tag, fa, callback) {
 
   var postURL = "/posts/addListing";
 
@@ -190,7 +193,8 @@ function storeListing(url, txt, amnt, tag, callback) {
     text: txt,
     amount: amnt,
     imgUrl: url,
-    listTag: tag
+    listTag: tag,
+    faTag: fa
   };
 
   postRequest.send(JSON.stringify(postBody));

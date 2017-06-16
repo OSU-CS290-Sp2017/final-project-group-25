@@ -27,7 +27,8 @@ app.post('/posts/addListing', function (req, res, next) {
     text: req.body.text,
     amount: req.body.amount,
     imgUrl: req.body.imgUrl,
-    listTag: req.body.listTag
+    listTag: req.body.listTag,
+    faTag: req.body.faTag
   };
 
   posts.push(posting);
