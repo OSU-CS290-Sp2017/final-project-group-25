@@ -14,3 +14,8 @@ ______________________Still needs working_____________________
 New post needs to have a drop down or option to select between listing and sell order.
 
 Filters are broken as a result of server.js implementation
+
+
+
+
+Note: the outrageous number of commits made by me, sean cramsey is a result of installing the node_modules, the real number is closer 327, not sure though because that big commit involved changing a number of other files
