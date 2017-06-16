@@ -17,32 +17,45 @@
   <body>
 
     <header>
+      <a href="#"><h1 class="Site_Title"> Corvallis Yard Sales </h1> </a>
+    </header>
 
-      <a href="#"><h1 class="site-title"> Corvallis Yard Sales </h1> </a>
-      <button type="button" id="New_Listing_Button"> New Post</button>
 
-      <input type="text" id="Menu_Bar_Search_Input" placeholder="Find Stuff">
-      <button type="button" id="navbar-search-button"><i class="fa fa-binoculars"></i></button>
 
+
+
+
+    <main class="Listing_Field">
 
       <nav class="Menu_Bar">
+
+    <div class="List">
+
+          <button type="button" id="New_Listing_Button"> Listing </button>
+
+          <button type="button" id="New_sell_Button"> Sell </button>
+
+          <button type="button" id="New_buy_Button"> Buy </button>
+
+    </div>
+
         <ul class="Menu_directory">
+          <input type="text" id="Menu_Bar_Search_Input" placeholder="Find Stuff">
+          <button type="button" id="Search_Button"><i class="fa fa-binoculars"></i></button>
 
-          <li class="Menu_Bar_Item Menu_Link active"><a href="#">Home <j class="fa fa-home" aria-hidden="true"></j></a></li>
+          <li class="Menu_Bar_Item Menu_Link active" id = "Home"><a href="#"> CYS Home <j class="fa fa-home" aria-hidden="true"></j></a></li>
 
-          <li class="Menu_Bar_Item Menu_Link"><a href="#">Local Listings <k class="fa fa-flag" aria-hidden="true"></k></a></li>
+          <li class="Menu_Bar_Item Menu_Link" id = "Local_Listings"><a href="#">Local Listings <k class="fa fa-flag" aria-hidden="true"></k></a></li>
 
-          <li class="Menu_Bar_Item Menu_Link"><a href="#">Sell Item <l class="fa fa-tags" aria-hidden="true"></l></a></li>
+          <li class="Menu_Bar_Item Menu_Link" id = "Willing_to_Sell"><a href="#">Willing to Sell <l class="fa fa-tags" aria-hidden="true"></l></a></li>
 
-          <li class="Menu_Bar_Item Menu_Link"><a href="#">Buy Item <l class="fa fa-tags" aria-hidden="true"></l></a></li>
+          <li class="Menu_Bar_Item Menu_Link" id = "Willing_to_Buy"><a href="#">Willing to Buy <l class="fa fa-tags" aria-hidden="true"></l></a></li>
 
           <li class="Menu_Bar_Item navbar-search">
-
 
           </li>
         </ul>
       </nav>
-    </header>
 
     <main class="error_Popup">
       <h2>404</h2>
