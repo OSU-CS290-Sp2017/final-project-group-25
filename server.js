@@ -26,7 +26,8 @@ app.post('/posts/addListing', function (req, res, next) {
   var posting = {
     text: req.body.text,
     amount: req.body.amount,
-    imgUrl: req.body.imgUrl
+    imgUrl: req.body.imgUrl,
+    listTag: req.body.listTag
   };
 
   posts.push(posting);

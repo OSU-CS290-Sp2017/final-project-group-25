@@ -1,13 +1,13 @@
-
+var tagL = "";
 
 var Create_Button = document.getElementById('New_Listing_Button');
-Create_Button.addEventListener('click', function() {unhideModal();});
+Create_Button.addEventListener('click', function() {unhideModal(); tagL = "Local_List_Box";});
 
 var Create_Button1 = document.getElementById('New_buy_Button');
-Create_Button1.addEventListener('click', function() {unhideModal();});
+Create_Button1.addEventListener('click', function() {unhideModal(); tagL = "Buy_Box";});
 
 var Create_Button2 = document.getElementById('New_sell_Button');
-Create_Button2.addEventListener('click', function() {unhideModal();});
+Create_Button2.addEventListener('click', function() {unhideModal(); tagL = "Sell_Box"});
 
 function unhideModal(){
     document.getElementById("Popup_Background").style.display ="block";
@@ -144,7 +144,7 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
  var image = document.getElementById('Img_URL').value || '';
  var descrip = document.getElementById('text_input').value || '';
  var amount = document.getElementById('Date_Input').value || '';
- storeListing(image, descrip, amount, function(err) {
+ storeListing(image, descrip, amount, tagL, function(err) {
    if (err) {
          alert("Unable to save person's post.  Got this error:\n\n" + err);
      } else {
@@ -153,7 +153,8 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
        var templateArgs = {
          imgUrl: image,
          text: descrip,
-         amount: amount
+         amount: amount,
+         listTag: tagL
 
        };
 
@@ -165,10 +166,11 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
 
      }
  });
+ listTag = "";
  closeModal();
 };
 
-function storeListing(url, txt, amnt, callback) {
+function storeListing(url, txt, amnt, tag, callback) {
 
   var postURL = "/posts/addListing";
 
@@ -187,7 +189,8 @@ function storeListing(url, txt, amnt, callback) {
   var postBody = {
     text: txt,
     amount: amnt,
-    imgUrl: url
+    imgUrl: url,
+    listTag: tag
   };
 
   postRequest.send(JSON.stringify(postBody));
