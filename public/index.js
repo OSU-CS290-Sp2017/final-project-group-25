@@ -73,7 +73,7 @@ function acceptButton(){
 
   else
   {
-
+/*
  var main  = document.createElement("main");
  var div0 = document.createElement("div");
  var article = document.createElement("article");
@@ -126,7 +126,7 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
  p2.appendChild(New_date);
 
  p2.appendChild(img);
- 
+
  div1.appendChild(p);
  div1.appendChild(p2);
 
@@ -139,9 +139,61 @@ var New_URL = document.createTextNode(document.getElementById("Img_URL").value);
  document.getElementById("Date_Input").value = "";
 
  document.getElementById("Img_URL").value = "";
+*/
  }
+ var image = document.getElementById('Img_URL').value || '';
+ var descrip = document.getElementById('text_input').value || '';
+ var amount = document.getElementById('Date_Input').value || '';
+ storeListing(image, descrip, amount, function(err) {
+   if (err) {
+         alert("Unable to save person's post.  Got this error:\n\n" + err);
+     } else {
 
+       var PostTemplate = Handlebars.templates['post'];
+       var templateArgs = {
+         imgUrl: image,
+         text: descrip,
+         amount: amount
+
+       };
+
+       var postHTML = PostTemplate(templateArgs);
+       // console.log(photoCardHTML);
+
+       var postContainer = document.querySelector('.Post');
+       postContainer.insertAdjacentHTML('beforeend', postHTML);
+
+     }
+ });
+ closeModal();
 };
+
+function storeListing(url, txt, amnt, callback) {
+
+  var postURL = "/posts/addListing";
+
+  var postRequest = new XMLHttpRequest();
+  postRequest.open('POST', postURL);
+  postRequest.setRequestHeader('Content-Type', 'application/json');
+
+  postRequest.addEventListener('load', function (event) {
+    var error;
+    if (event.target.status !== 200) {
+      error = event.target.response;
+    }
+    callback(error);
+  });
+
+  var postBody = {
+    text: txt,
+    amount: amnt,
+    imgUrl: url
+  };
+
+  postRequest.send(JSON.stringify(postBody));
+
+}
+
 
 function showSelling(){
     var buyBoxes = document.getElementsByClassName("Buy_Box");
