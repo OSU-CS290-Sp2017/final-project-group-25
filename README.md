@@ -13,5 +13,4 @@ ______________________Still needs working_____________________
 
 New post needs to have a drop down or option to select between listing and sell order.
 
-JSON data need to be generated for the listing, willing to sell and willing to buy.
- /writes json for text, cost and imgUrl, but not buying/selling tags
+searches and filters are broken as a result of server.js implementation
