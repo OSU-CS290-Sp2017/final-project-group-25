@@ -2,7 +2,7 @@
   "name": "assignment-final25",
   "version": "0.0.1",
   "description": "Craigslist mimic",
-  "main": "serverM.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "handlebars views/partials/post.handlebars -f public/postTemplate.js",
